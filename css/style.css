@@ -1,5 +1,6 @@
 *{
     margin: 0px;
+    padding: 0px;
     list-style: none;
     text-decoration: none;
     outline: none;
@@ -57,13 +58,32 @@ body{
     color: #ffffff;
 }
 .start-btn{
+    width: 100%;
+    height: 720px;
+    background-color: #ffffff;
+    position: relative;
     text-align: center;
+}
+.start-btn::before{
+    content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 90px;
+    background-image: url(/images/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .start-btn button{
     border-radius: 5px;
     padding: 0.12in 30px;
     border-color: #00065f;
     background-color: #00065f;
+    position: relative;
 }
 .start-btn a{
     text-decoration: none;
@@ -71,11 +91,15 @@ body{
     font-size: larger;
 }
 .main-wrapper{
+    margin-top: 50px;
     background-color: #EEF1F6;
     padding: 0px 8%;
     position: relative;
     text-align: center;
     color: #00065f;
+    background-image: url(/images/underlay.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .serve2{
     display: flex;
@@ -84,7 +108,7 @@ body{
 .main-wrapper h2{
     font-size: 24px;
     font-weight: 600;
-    margin-top: 30px;
+    margin: 30px 0px;
     padding-top: 50px;
 }
 .serve2 img{
@@ -230,10 +254,11 @@ footer a{
 footer .data{
     display: flex;
     flex-direction: column;
-    /* width: 100%; */
     justify-content: space-between;
     align-items: flex-end;
     gap: 20px;
+    padding-right: 0px;
+    margin-right: 0px;
 }
 footer .data form{
     display: flex;
