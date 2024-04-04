@@ -1,172 +1,301 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>Starmil</title>
-</head>
-<body>
-    <!-- Navigation bar -->
-    <header class="nav-bar">
-        <div class="logo">
-            <img src="images/xlogo.png" alt="logo">
-        </div>
-        <div class="nav-btn">
-            <a href="#">HOME</a>
-            <a href="#">ABOUT US</a>
-            <a href="#">PROFILE</a>
-            <a href="#">EBOOK STORE</a>
-            <a href="#">COUPON VENDORS</a>
-            <a href="#">TOP EARNERS</a>
-            <a href="#">COUPON CHECKER</a>
-        </div>
-        <div class="log-btn">
-            <button class="log"><a href="#">LOGIN</a></button>
-            <button class="sign"><a href="#">SIGN UP</a></button>
-        </dihv>
-    </header>
-    <!-- End of navigation bar -->
+<html>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QS40HB04KY"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
 
-    <div class="start-btn">
-    <button><a href="#">Get Started</a></button>
-    </div>
-    <div class="main-wrapper">
-
-        <!-- Services -->
-        <h2>OUR SERVICES:</h2>
-        <div class="serve1">
-            <div class="serve2">
-                <div class="sect">
-                    <img src="images/affiliate-vector.svg" alt="affliate icon">
-                    <h4>SKILLS</h4>
-                    <p>Since the 21st century skills are essential for everyone at different stages in life. we have provided the essential support service needed to acquire those skills</p>
+            gtag('config', 'G-QS40HB04KY');
+        </script>
+        <title>Starmil</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" rel="stylesheet"/>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="top-bar">
+                <div class="logo">
+                    <h2>Starmil</h2>
                 </div>
-                <div class="sect">
-                    <img src="images/mlm-vector.svg" alt="affliate icon">
-                    <h4>INCENTIVES</h4>
-                    <p>At various rank levels, incentive are awarded to individual who are too affiliates on stamil abd are in turn rewarded for their sales commissions made.</p>
+                <div class="site-nav">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#">Profile</a>
+                            </li>
+                            <li>
+                                <a href="#">Ebook Store</a>
+                            </li>
+                            <li>
+                                <a href="#">Coupon Vendors</a>
+                            </li>
+                            <li>
+                                <a href="#">Top Earners</a>
+                            </li>
+                            <li>
+                                <a href="#">Coupon Checker</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="#">Login</a>
+                            </li>
+                            <li>
+                                <a href="#">Signup</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <div class="sect">
-                    <img src="images/network.png" alt="affliate icon">
-                    <h4>NETWORKING MARKETING</h4>
-                    <p>Various users can take advantages of their networking prowess to earn additional revenue on stamil</p>
-                </div>
-                <div class="sect">
-                    <img src="images/skills-vector.svg" alt="affliate icon">
-                    <h4>MARKETPLACE</h4>
-                    <p>Starmil provides an on online outlet for display of various products by users for the over a thousand audience to view and purchase items for them</p>
+                <div class="toggle-menu">
+                    <span></span>
                 </div>
             </div>
-            <p class="note">On Starmil, Users gets to Connect, Network, Engage, Learn and earn seamlessly from the comfort of their homes or anyone</p>
-            <!-- End of services -->
+            <div class="actions">
+                <a href="#">Get Started </a>
+            </div>
+        </header>
+        <script>
+            let toggleMenu = document.querySelector(".toggle-menu")
+            let menuBox = document.querySelector(".site-nav")
 
-            <!-- Top Feeds -->
-            <h4 class="feeds-head">TOP FEEDS</h4>
-            <div class="feeds-box">
-                <img src="images/games.png" alt="chess">
-                <div class="inner-box">
-                    <h5>GAMES</h5>
-                    <p>Easy and fun to play games are also available</p>
-                </div>
-                <img src="images/user-friendly.png" alt="user friendly">
-                <div class="inner-box">
-                    <h5>USER FRIENDLY</h5>
-                    <p>Easy to navigate and stay on track</p>
-                </div>
-                <img src="images/security.png" alt="security">
-                <div class="inner-box">
-                    <h5>SECURITY</h5>
-                    <p>User data's are protected from all forms of attacks and loss in the best way possible</p>
-                </div>
-                <img src="images/customer-support.png" alt="customer support">
-                <div class="inner-box">
-                    <h5>24/7 CUSTOMER CARE SERVICE</h5>
-                    <p>Customers are attended in real time and assisted with all information needed</p>
+            let isOpenMenu = false
+
+            toggleMenu.addEventListener('click', ()=>{
+                if (!isOpenMenu) {
+                    menuBox.style.display = "flex";
+                    isOpenMenu = true;
+                } else {
+                    menuBox.style.display = "none";
+                    isOpenMenu = false;
+                }
+            }
+            )
+        </script>
+        <div class="site-wrapper">
+            <!-- wrapper -->
+            <!-- container-->
+            <div class="container">
+                <div class="home-page">
+                    <div class="offer-sec">
+                        <h4>OUR SERVICES:</h4>
+                        <div class="content">
+                            <div class="items">
+                                <div class="img-content">
+                                    <img src="images/affiliate-vector.svg" alt="affiliate icon">
+                                </div>
+                                <h5>Skills</h5>
+                                <p>Since the 21st century skills are essential for everyone at different stages in life. we have provided the essential support service needed to acquire those skills</p>
+                            </div>
+                            <div class="items">
+                                <div class="img-content">
+                                    <img src="images/mlm-vector.svg" alt="affiliate icon">
+                                </div>
+                                <h5>INCENTIVES</h5>
+                                <p>At various rank levels, incentive are awarded to individual who are too affiliates on stamil abd are in turn rewarded for their sales commissions made.</p>
+                            </div>
+                            <div class="items">
+                                <div class="img-content">
+                                    <img src="images/network.png" alt="affiliate icon">
+                                </div>
+                                <h5>NETWORKING MARKETING</h5>
+                                <p>Various users can take advantages of their networking prowess to earn additional revenue on stamil</p>
+                            </div>
+                            <div class="items">
+                                <div class="img-content">
+                                    <img src="images/skills-vector.svg" alt="affiliate icon">
+                                </div>
+                                <h5>MARKETPLACE</h5>
+                                <p>Starmil provides an on online outlet for display of various products by users for the over a thousand audience to view and purchase items for them</p>
+                            </div>
+                        </div>
+                        <div class="meta">
+                            <p>On Starmil, Users gets to Connect, Network, Engage, Learn and earn seamlessly from the comfort of their homes or anyone</p>
+                        </div>
+                    </div>
+                    <!-- Testmonial -->
+                    <div class="features">
+                        <h4>TOP FEEDS</h4>
+                        <div class="content">
+                            <div class="item">
+                                <div class="img-content">
+                                    <img src="images/games.png" alt="Chess board">
+                                </div>
+                                <div class="text-content">
+                                    <h5>Games</h5>
+                                    <p>Easy and fun to play game are also avaliable </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="img-content">
+                                    <img src="images/user-friendly.png" alt="User friendly image">
+                                </div>
+                                <div class="text-content">
+                                    <h5>user friendly</h5>
+                                    <p>Easy to navigate and stay on track</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="img-content">
+                                    <img src="images/security.png" alt="security image">
+                                </div>
+                                <div class="text-content">
+                                    <h5>security</h5>
+                                    <p>user data's are protected from all forms of attacks and loss in the best way possible</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="img-content">
+                                    <img src="images/customer-support.png" alt="sustomer support image">
+                                </div>
+                                <div class="text-content">
+                                    <h5>24/7 customer care service</h5>
+                                    <p>Customers are attended in real quick time and assisted with all information needed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Earning -->
+                    <div class="start-earning">
+                        <h4>easy navigation to get started</h4>
+                        <div class="content">
+                            <div class="items">
+                                <div class="img-content">
+                                    <img src="images/coupon-vector.svg" alt="affiliate icon">
+                                </div>
+                                <div class="text-content">
+                                    <h5>purchase an activation code</h5>
+                                    <p>Activation codes are requirements for a successful registration, they can be purchased only from verified resellers on our website</p>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="img-content">
+                                    <img src="images/account-vector.svg" alt="affiliate icon">
+                                </div>
+                                <div class="text-content">
+                                    <h5>create an account</h5>
+                                    <p>after the successful purchase of the activation codes, visit the registration page to successfully register yourself </p>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="img-content">
+                                    <img src="images/ready-vector.svg" alt="affiliate icon">
+                                </div>
+                                <div class="text-content">
+                                    <h5>login and get started </h5>
+                                    <p>the next step is to login to your dashboard, engage, network, perform task, learn skills, upload and sell e-books, , make use of our marketplace and lot more</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- End of top feeds -->
-
-            <!-- Easy Nav Section -->
-            <section class="easy">
-                <h4>EASY NAVIGATION TO GET STARTED</h4>
-                <div class="easy-box">
-                    <div class="inner-box">
-                        <img src="images/coupon-vector.svg" alt="affliate icon">
-                        <div class="box-text">
-                            <h5>Purchase An Activation Code</h5>
-                            <p>Activation codes are requirements for a successful registration, they can be purchased only from verified resellers on our website</p>
-                        </div>
-                    </div>
-                    <div class="inner-box">
-                        <img src="images/account-vector.svg" alt="affliate icon">
-                        <div class="box-text">
-                            <h5>Create An Account</h5>
-                            <p>After the successful purchase of the activation codes, visit the registration page to successfully register yourself</p>
-                        </div>
-                    </div>
-                    <div class="inner-box">
-                        <img src="images/ready-vector.svg" alt="affliate icon">
-                        <div class="box-text">
-                            <h5>Login And Get Started</h5>
-                            <p>The next step is to login to your dashboard, engage, network, perform task, learn skills, upload and sell e-books, , make use of our marketplace and lot more</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- End of Easy Nav Section -->
         </div>
-    </div>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="logo">
-            <h3>STARMIL</h3>
-            <div class="icons">
-                <h5>SOCIAL MEDIA</h5>
+        <!-- wrapper -->
+        <footer>
+            <div class="footer-logo">
+                <h3>Starmil</h3>
+                <div class="social">
+                    <h5>Social Media</h5>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <nav>
+                    <h4>About</h4>
+                    <ul>
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">How it works</a>
+                        </li>
+                        <li>
+                            <a href="#">Activities</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact us</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQs</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav>
+                    <h4>Legal</h4>
+                    <ul>
+                        <li>
+                            <a href="#">Terms Of service</a>
+                        </li>
+                        <li>
+                            <a href="#">About Starmil</a>
+                        </li>
+                        <li>
+                            <a href="# ">Privacy policy </a>
+                        </li>
+                        <li>
+                            <a href="#">Disclaimer</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="meta">
+                <form action="">
+                    <input type="text" placeholder="Enter  your username ">
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
                 <ul>
-                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
-                    <li><a href="#"><i class="fab fa-telegram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li>
+                        <a href="#">Terms</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="#">Cookies</a>
+                    </li>
                 </ul>
             </div>
-        </div>
-        <div class="nav">
-            <h4>ABOUT</h4>
-            <ul>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">How it works</a></li>
-                <li><a href="#">Activities</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#">FAQs</a></li>
-            </ul>
-        </div>
-        <div class="nav">
-            <h4>LEGAL</h4>
-            <ul>
-                <li><a href="#">Terms Of service</a></li>
-                <li><a href="#">About Starmil</a></li>
-                <li><a href="#">Privacy policy</a></li>
-                <li><a href="#">Disclaimer</a></li>
-            </ul>
-        </div>
-        <div class="data">
-            <form action="">
-                <input type="text" placeholder="Enter your username">
-                <button>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </form>
-            <ul>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Cookies</a></li>
-            </ul>
-        </div>
-    </footer>
-    <!-- Footer Section -->
-</body>
+        </footer>
+    </body>
 </html>
